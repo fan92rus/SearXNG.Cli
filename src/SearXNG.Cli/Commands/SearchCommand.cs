@@ -9,14 +9,16 @@ public static class SearchCommand
 {
     public static Command Create()
     {
+        var config = ConfigLoader.Load();
+
         var queryArg = new Argument<string>("query", "Search query string");
 
-        var categoryOption = new Option<string?>("--category", "Filter by category (e.g., general, news, images, videos)");
-        var languageOption = new Option<string?>("--lang", "Language code (e.g., en, ru, de)");
-        var timeOption = new Option<string?>("--time", "Time range filter: day, week, month, year");
-        var safeOption = new Option<int?>("--safe", "Safe search level: 0 (off), 1 (moderate), 2 (strict)");
-        var countOption = new Option<int>("--count", () => 10, "Maximum number of results to display");
-        var instanceOption = new Option<string>("--instance", () => "https://searxng.local", "SearXNG instance URL");
+        var categoryOption = new Option<string?>("--category", () => config.Category, "Filter by category (e.g., general, news, images, videos)");
+        var languageOption = new Option<string?>("--lang", () => config.Language, "Language code (e.g., en, ru, de)");
+        var timeOption = new Option<string?>("--time", () => config.TimeRange, "Time range filter: day, week, month, year");
+        var safeOption = new Option<int?>("--safe", () => config.SafeSearch, "Safe search level: 0 (off), 1 (moderate), 2 (strict)");
+        var countOption = new Option<int>("--count", () => config.Count, "Maximum number of results to display");
+        var instanceOption = new Option<string>("--instance", () => config.Instance, "SearXNG instance URL");
 
         var command = new Command("searx", "Search the web via SearXNG")
         {

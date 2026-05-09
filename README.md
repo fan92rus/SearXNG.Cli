@@ -35,6 +35,23 @@ searx "query" --instance https://search.example.com
 | `--count` | Maximum results to display (default: 10) |
 | `--instance` | SearXNG instance URL (default: `https://searxng.local`) |
 
+## Configuration file
+
+You can set defaults in `~/.config/searx/config.json`:
+
+```json
+{
+  "instance": "https://searxng.local",
+  "category": "general",
+  "language": "ru",
+  "timeRange": "week",
+  "safeSearch": 1,
+  "count": 10
+}
+```
+
+CLI flags always override config file values.
+
 ## Output format
 
 Results are printed as a plain text list to keep token usage minimal for AI agents:

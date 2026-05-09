@@ -8,10 +8,13 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>searx</ToolCommandName>
     <PackageId>SearXNG.Cli</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>SearchXNG Contributors</Authors>
     <Description>A lightweight CLI tool for searching via SearXNG instances.</Description>
     <PackageTags>searxng;search;cli;tool</PackageTags>
+    <PackageProjectUrl>https://github.com/fan92rus/SearXNG.Cli</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/fan92rus/SearXNG.Cli</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

@@ -9,6 +9,8 @@ Search the web using the SearXNG CLI tool.
 searx "<query>" [--category <cat>] [--lang <lang>] [--time <range>] [--count <n>]
 ```
 
+**Important:** Do not pass `--instance` unless the user explicitly asks to use a different SearXNG instance. The default instance is already configured (either via config file or built-in default).
+
 **Step 2: Analyze results**
 - Summarize the top results with URLs, titles, and snippets
 - If no results: report "No results found"

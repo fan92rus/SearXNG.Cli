@@ -7,7 +7,7 @@ description: >
   TRIGGER: When the user asks to search the web, find information online,
   or lookup something on the internet.
 allowed-tools: Bash(searx)
-version: "0.1.4"
+version: "0.1.5"
 ---
 
 # SearXNG.Cli — Web Search
@@ -59,7 +59,7 @@ searx "query" --safe 2
 searx "query" --count 5
 ```
 
-**Custom instance:**
+**Custom instance (only when user explicitly requests it):**
 ```bash
 searx "query" --instance https://search.example.com
 ```
@@ -149,6 +149,7 @@ If `CLAUDE.md` does not exist, skip this step.
 - **Use config file** for frequently used defaults (language, instance)
 - **Keep `--count` low** for AI context efficiency (default 10 is usually enough)
 - **Combine filters** for precise results: `--category news --time day --lang en`
+- **Do not pass `--instance`** unless the user explicitly asks for a different SearXNG instance
 - **Check instance health** if searches suddenly fail
 
 ## CLI Reference

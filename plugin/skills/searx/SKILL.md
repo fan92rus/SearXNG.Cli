@@ -7,7 +7,7 @@ description: >
   TRIGGER: When the user asks to search the web, find information online,
   or lookup something on the internet.
 allowed-tools: Bash(searx)
-version: "0.1.2"
+version: "0.1.3"
 ---
 
 # SearXNG.Cli — Web Search

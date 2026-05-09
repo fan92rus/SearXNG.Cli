@@ -6,6 +6,8 @@ A lightweight cross-platform CLI tool for searching the web via [SearXNG](https:
 
 ### From NuGet (recommended)
 
+Package: [SearXNG.Cli on NuGet](https://www.nuget.org/packages/SearXNG.Cli)
+
 ```bash
 dotnet tool install --global SearXNG.Cli
 ```

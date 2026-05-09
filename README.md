@@ -155,6 +155,32 @@ dotnet test
 dotnet pack --configuration Release --output ./nupkg
 ```
 
+## Claude Code Plugin
+
+This repo includes a Claude Code plugin that adds the `/searx-search` slash command
+and the `searx` skill for AI-assisted web search.
+
+### Install the plugin
+
+From the repo root:
+
+```bash
+# Linux / macOS
+./install-plugin.sh
+
+# Windows PowerShell
+.\install-plugin.ps1
+```
+
+This copies `plugin/` to `~/.claude/plugins/searx/`.
+
+Restart Claude Code to load the plugin.
+
+### What you get
+
+- **Slash command**: `/searx-search` — triggers a guided web search workflow
+- **Skill**: `searx` — automatically invoked when you ask to search the web
+
 ## License
 
 MIT

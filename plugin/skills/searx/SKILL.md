@@ -81,6 +81,13 @@ Set defaults in `~/.config/searx/config.json`:
 
 Priority: CLI flags > config file > built-in defaults.
 
+**Interactive setup:**
+```bash
+# Via Claude Code slash command
+/searx-init
+```
+This asks a few questions and writes the config file for you.
+
 ## Output Format
 
 ```

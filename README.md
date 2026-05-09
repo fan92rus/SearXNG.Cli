@@ -179,6 +179,7 @@ Restart Claude Code to load the plugin.
 ### What you get
 
 - **Slash command**: `/searx-search` — triggers a guided web search workflow
+- **Slash command**: `/searx-init` — interactive config setup (asks questions and writes `~/.config/searx/config.json`)
 - **Skill**: `searx` — automatically invoked when you ask to search the web
 
 ## License

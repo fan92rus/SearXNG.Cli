@@ -3,3 +3,18 @@
 .dolt/
 *.db
 .beads-credential-key
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# NuGet
+nupkg/
+*.nupkg
+
+# IDE
+.vscode/
+.idea/
+*.swp

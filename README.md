@@ -4,8 +4,43 @@ A lightweight cross-platform CLI tool for searching the web via [SearXNG](https:
 
 ## Installation
 
+### From NuGet (recommended)
+
 ```bash
 dotnet tool install --global SearXNG.Cli
+```
+
+To update:
+```bash
+dotnet tool update --global SearXNG.Cli
+```
+
+### From GitHub Releases
+
+1. Download the latest `.nupkg` from [Releases](https://github.com/fan92rus/SearXNG.Cli/releases)
+2. Install from the local file:
+
+```bash
+dotnet tool install --global SearXNG.Cli --add-source ./path-to-downloaded-nupkg
+```
+
+### From CI Artifacts
+
+1. Go to [Actions](https://github.com/fan92rus/SearXNG.Cli/actions) and open the latest successful run
+2. Download the `nupkg` artifact and extract it
+3. Install:
+
+```bash
+dotnet tool install --global SearXNG.Cli --add-source ./extracted-folder
+```
+
+### From Source
+
+```bash
+git clone https://github.com/fan92rus/SearXNG.Cli.git
+cd SearXNG.Cli
+dotnet pack --configuration Release --output ./nupkg
+dotnet tool install --global --add-source ./nupkg SearXNG.Cli
 ```
 
 ## Usage
@@ -35,9 +70,15 @@ searx "query" --instance https://search.example.com
 | `--count` | Maximum results to display (default: 10) |
 | `--instance` | SearXNG instance URL (default: `https://searxng.local`) |
 
-## Configuration file
+## Configuration File
 
-You can set defaults in `~/.config/searx/config.json`:
+Instead of passing flags every time, you can set defaults in a config file.
+
+**Config location** (cross-platform):
+- Windows: `%USERPROFILE%\.config\searx\config.json`
+- Linux / macOS: `~/.config/searx/config.json`
+
+**Example `config.json`**:
 
 ```json
 {
@@ -50,9 +91,11 @@ You can set defaults in `~/.config/searx/config.json`:
 }
 ```
 
-CLI flags always override config file values.
+**Priority**: CLI flags > config file > built-in defaults.
 
-## Output format
+If the config file is missing or contains invalid JSON, built-in defaults are used automatically.
+
+## Output Format
 
 Results are printed as a plain text list to keep token usage minimal for AI agents:
 
@@ -66,13 +109,12 @@ Results are printed as a plain text list to keep token usage minimal for AI agen
    Another description...
 ```
 
-## Building from source
+## Building from Source
 
 ```bash
 dotnet build
 dotnet test
-dotnet pack --output ./nupkg
-dotnet tool install --global --add-source ./nupkg SearXNG.Cli
+dotnet pack --configuration Release --output ./nupkg
 ```
 
 ## License

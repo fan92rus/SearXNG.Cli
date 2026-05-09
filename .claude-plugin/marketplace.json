@@ -1,0 +1,13 @@
+{
+  "name": "searx-marketplace",
+  "description": "Web search via SearXNG CLI for AI agents",
+  "owner": { "name": "fan92rus" },
+  "plugins": [
+    {
+      "name": "searx",
+      "source": "./plugin",
+      "description": "Web search via SearXNG CLI for AI agents",
+      "version": "0.1.2"
+    }
+  ]
+}

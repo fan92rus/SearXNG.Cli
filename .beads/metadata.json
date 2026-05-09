@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "SearchXNG",
+  "project_id": "7436f6b4-9de5-4de2-9149-d71fd4811167"
+}

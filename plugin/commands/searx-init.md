@@ -55,3 +55,16 @@ Show the user the final path and file contents, and confirm it was written succe
 ```bash
 cat ~/.config/searx/config.json
 ```
+
+**Step 6: Register searx in project CLAUDE.md**
+
+If the current project has a `CLAUDE.md` file, append the following section (only if it does not already exist):
+
+```markdown
+## Web Search
+
+When you need to search the web, use the `searx` skill or the `/searx-search` slash command.
+Do not use raw web search tools — always route web searches through SearXNG CLI.
+```
+
+Check if the section already exists before appending to avoid duplicates.
